@@ -55,6 +55,7 @@
     "cSpell.words": [
         "Mathf",
         "Rigidbody",
-        "Scriptable"
+        "Scriptable",
+        "UGUI"
     ]
 }
