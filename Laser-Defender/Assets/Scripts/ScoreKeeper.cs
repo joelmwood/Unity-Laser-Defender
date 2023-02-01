@@ -6,6 +6,22 @@ public class ScoreKeeper : MonoBehaviour
 {
     int score;
 
+    static ScoreKeeper instance;
+
+    void Awake(){
+        ManageSingleton();
+    }
+
+    void ManageSingleton(){
+        if(instance != null){
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }else{
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
